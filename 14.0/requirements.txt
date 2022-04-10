@@ -3,6 +3,6 @@ opencv-contrib-python==4.1.0.25
 ffmpy
 pydub
 requests_toolbelt
-pandas==1.3.5
 lxml_to_dict
 pycryptodome
+html2text
