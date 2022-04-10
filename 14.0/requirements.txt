@@ -1,6 +1,8 @@
 numpy==1.19.3
 opencv-contrib-python==4.1.0.25
-pdfminer
-num2words
 ffmpy
 pydub
+requests_toolbelt
+pandas==1.3.5
+lxml_to_dict
+pycryptodome
