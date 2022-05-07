@@ -39,6 +39,7 @@ RUN apt-get update && \
 
 # install requirements.txt
 COPY ./requirements.txt /
+RUN pip3 install --upgrade pip
 RUN pip3 install -r /requirements.txt
 
 # install latest postgresql-client
