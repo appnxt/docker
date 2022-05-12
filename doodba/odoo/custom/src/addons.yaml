@@ -1,16 +1,26 @@
-server-tools:
-  - module_auto_update
 web:
-  - web_responsive
-  - web_environment_ribbon
   - "*"
 queue:
   - "*"
 server-auth:
   - "*"
+server-env:
+  - "*"
 contract:
   - "*"
-server-env:
+server-tools:
+  - "*"
+server-ux:
+  - "*"
+social:
+  - "*"
+product-attribute:
+  - "*"
+manufacture:
+  - "*"
+stock-logistics-warehouse:
+  - "*"
+ddmrp:
   - "*"
 ---
 ENV:
@@ -19,4 +29,5 @@ saas-addons:
   - "*"
 access-addons:
   - "*"
-
+sync-addons:
+  - "*"
