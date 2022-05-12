@@ -1,0 +1,22 @@
+server-tools:
+  - module_auto_update
+web:
+  - web_responsive
+  - web_environment_ribbon
+  - "*"
+queue:
+  - "*"
+server-auth:
+  - "*"
+contract:
+  - "*"
+server-env:
+  - "*"
+---
+ENV:
+    DEFAULT_REPO_PATTERN: https://github.com/it-projects-llc/{}.git
+saas-addons:
+  - "*"
+access-addons:
+  - "*"
+

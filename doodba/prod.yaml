@@ -1,0 +1,27 @@
+version: "2.4"
+
+services:
+  odoo:
+    extends:
+      file: common.yaml
+      service: odoo
+    restart: unless-stopped
+    env_file:
+      - .docker/odoo.env
+      - .docker/db-access.env
+    environment:
+      DB_FILTER: "^example"
+      DOODBA_ENVIRONMENT: "${DOODBA_ENVIRONMENT-prod}"
+      INITIAL_LANG: "en_US"
+    volumes:
+      - ./odoo/custom/conf.d/odoo.conf:/opt/odoo/auto/odoo.conf
+    command: odoo -c /opt/odoo/auto/odoo.conf --db_port 5432 --xmlrpc-port 8803
+
+networks:
+  default:
+    external:
+      name: nginx 
+
+volumes:
+  filestore:
+  db:

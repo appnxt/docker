@@ -1,0 +1,26 @@
+version: "2.4"
+
+services:
+  odoo:
+    image: docker.io/appnxt/example-odoo:14.0
+    build:
+      context: ./odoo
+      args:
+        ODOO_VERSION: "14.0"
+        UID: "${UID:-1000}"
+        GID: "${GID:-1000}"
+    environment:
+      EMAIL_FROM: ""
+      PGDATABASE: &dbname example
+      PGUSER: &dbuser "odoo"
+      PROXY_MODE: "true"
+      LIST_DB: "true"
+    tty: true
+    volumes:
+      - filestore:/var/lib/odoo:z
+
+  
+
+  smtpfake:
+    image: docker.io/mailhog/mailhog
+
